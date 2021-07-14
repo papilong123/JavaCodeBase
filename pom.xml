@@ -14,7 +14,7 @@
     <groupId>com.mycompany</groupId>
     <artifactId>codebase</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>JavaCodeBase</name>
+    <name>codebase</name>
     <description>write down my code</description>
 
     <properties>
@@ -43,6 +43,7 @@
         <module>kafka</module>
         <module>es</module>
         <module>redis</module>
+        <module>mysql</module>
     </modules>
 
     <dependencies>
