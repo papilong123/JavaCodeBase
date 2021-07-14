@@ -29,12 +29,14 @@ spring:
     consumer:
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: default-group-id
       enable-auto-commit: true
+#      提交offset延时(接收到消息后多久提交offset)
       auto-commit-interval: 100
       # 批量消费每次最多消费多少条消息
       max-poll-records: 100
       auto-offset-reset: earliest
-#      手动ack
+    #      手动ack
 #      enable-auto-commit: false
 
     listener:
