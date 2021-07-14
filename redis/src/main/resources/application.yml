@@ -1,0 +1,33 @@
+spring:
+  redis:
+    host: loveyou6.cn
+    port: 6379
+    database: 0
+    lettuce:
+      shutdown-timeout: 100ms
+      pool:
+        max-active: 20
+        max-idle: 8
+        min-idle: 0
+        max-wait: -1ms #连接池最大阻塞等待时间（使用负值表示没有限制）
+#        time-between-eviction-runs:
+      cluster:
+        refresh:
+          adaptive: false
+          dynamic-refresh-sources: true
+#          period:
+    ssl: false
+    password: 111111
+    connect-timeout: 3000
+    client-name: let
+    client-type: lettuce
+    timeout: 6000s  #连接超时时间
+#    redis集群配置
+#    cluster:
+#      nodes: 127.0.0.1:6601,127.0.0.1:6602,127.0.0.1:6603,127.0.0.1:6701,127.0.0.1:6702,127.0.0.0:6703
+#      commandTimeout: 5000  #设置命令的执行时间，如果超过这个时间，则报错;
+#      max-redirects: 3  # 获取失败 最大重定向次数
+#    sentinel: #配置哨兵
+#      nodes: # 节点
+#      master: # 主
+#      password:
