@@ -1,4 +1,4 @@
-package com.example.kafka.domain;
+package com.example.kafka.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Bar {
+public class Foo {
     private Integer id;
-    private Integer age;
+    private String name;
 }

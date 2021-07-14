@@ -1,6 +1,6 @@
 package com.example.kafka.component;
 
-import com.example.kafka.domain.Bar;
+import com.example.kafka.entity.Bar;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 

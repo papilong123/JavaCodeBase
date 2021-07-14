@@ -1,6 +1,6 @@
 package com.example.kafka.controller;
 
-import com.example.kafka.domain.Bar;
+import com.example.kafka.entity.Bar;
 import com.example.kafka.service.SyncAndAsyncService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

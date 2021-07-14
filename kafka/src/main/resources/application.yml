@@ -21,7 +21,9 @@ spring:
         spring:
           json:
             type:
-              mapping: foo:com.lzx.kafka.entity.Foo,bar:com.lzx.kafka.entity.Bar
+              mapping: foo:com.example.kafka.entity.Foo,bar:com.example.kafka.entity.Bar
+            trusted:
+              packages: foo:com.example.kafka.entity
 #      开启事务
 #      transaction-id-prefix: tx.
 #      重试次数

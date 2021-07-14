@@ -1,9 +1,8 @@
 package com.example.kafka.controller;
 
-import com.example.kafka.domain.Foo;
+import com.example.kafka.entity.Foo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 

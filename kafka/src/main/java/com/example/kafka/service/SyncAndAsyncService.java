@@ -1,6 +1,6 @@
 package com.example.kafka.service;
 
-import com.example.kafka.domain.Bar;
+import com.example.kafka.entity.Bar;
 import lombok.AllArgsConstructor;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.springframework.beans.factory.annotation.Autowired;
