@@ -8,7 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>ES</artifactId>
+    <artifactId>es</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>es</name>
     <description>Demo project for Spring Boot</description>
