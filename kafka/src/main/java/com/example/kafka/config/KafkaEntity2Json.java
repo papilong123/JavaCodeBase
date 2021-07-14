@@ -20,8 +20,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 发送实体类
  * https://github.com/Black1499/kafka_study/blob/master/src/main/java/com/lzx/kafka/example3/Example3Controller.java
+ * 这篇文章中重要的有kafka监听器工厂配置,@KafkaHandler,Controller和Listener都是实体类
  */
 @Configuration
 public class KafkaEntity2Json {

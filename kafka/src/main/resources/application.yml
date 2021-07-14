@@ -17,6 +17,7 @@ spring:
           ms: 0
 #        自定义分区器
 #        partitioner.class: com.felix.kafka.producer.CustomizePartitioner
+#        自定义类映射
         spring:
           json:
             type:
