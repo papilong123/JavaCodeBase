@@ -2,7 +2,12 @@ package com.example.kafka.service;
 
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.support.Acknowledgment;
+import org.springframework.stereotype.Service;
 
+/**
+ * 手动提交ack
+ */
+@Service
 public class AckManual {
 
     @KafkaListener(id = "webGroup", topics = "topic-kl")
