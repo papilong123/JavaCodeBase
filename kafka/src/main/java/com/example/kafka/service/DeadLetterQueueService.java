@@ -23,9 +23,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 @AllArgsConstructor
 public class DeadLetterQueueService {
 
+    @Autowired
     private final KafkaTemplate template;
 
-//    private KafkaOperations kafkaOperations;
+    @Autowired
+    private final KafkaOperations kafkaOperations;
 
     @Bean
     public ConcurrentKafkaListenerContainerFactory<?, ?> kafkaListenerContainerFactory(
@@ -36,7 +38,7 @@ public class DeadLetterQueueService {
         configurer.configure(factory, kafkaConsumerFactory);
         // 创建 FixedBackOff 对象 设置重试间隔 10秒 次数为 3次
         BackOff backOff = new FixedBackOff(10 * 1000L, 3L);
-        factory.setErrorHandler(new SeekToCurrentErrorHandler(new DeadLetterPublishingRecoverer(template), backOff));
+        factory.setErrorHandler(new SeekToCurrentErrorHandler(new DeadLetterPublishingRecoverer(kafkaOperations), backOff));
         return factory;
     }
 
