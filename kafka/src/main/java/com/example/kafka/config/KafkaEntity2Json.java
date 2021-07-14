@@ -19,6 +19,10 @@ import org.springframework.kafka.support.converter.StringJsonMessageConverter;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 发送实体类
+ * https://github.com/Black1499/kafka_study/blob/master/src/main/java/com/lzx/kafka/example3/Example3Controller.java
+ */
 @Configuration
 public class KafkaEntity2Json {
 //    @Bean
