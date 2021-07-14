@@ -41,7 +41,7 @@
 
     <modules>
         <module>kafka</module>
-        <module>ES</module>
+        <module>es</module>
         <module>redis</module>
     </modules>
 
