@@ -21,7 +21,7 @@ public class SimpleSendAndListenerController {
         this.template.send("topic_input", input);
     }
 
-    @KafkaListener(id = "webGroup", topics = "topic_input")
+    @KafkaListener(id = "webGroup1", topics = "topic_input")
     public void listen(String input){
         log.info("input value: {}", input);
     }

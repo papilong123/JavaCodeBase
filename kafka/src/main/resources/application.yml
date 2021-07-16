@@ -3,12 +3,10 @@ spring:
     bootstrap-servers: 192.168.3.15:9092
     producer:
 #      批量大小
-      batch-size: 4096
+#      batch-size: 4096
 #      生产端缓冲区大小
       buffer-memory: 40960
 #      Kafka提供的序列化和反序列化类
-      key-serializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-serializer: org.apache.kafka.common.serialization.StringDeserializer
       properties:
         # 提交延时
         # 当生产端积累的消息达到batch-size或接收到消息linger.ms后,生产者就会将消息提交给kafka
@@ -17,13 +15,7 @@ spring:
           ms: 0
 #        自定义分区器
 #        partitioner.class: com.felix.kafka.producer.CustomizePartitioner
-#        自定义类映射
-        spring:
-          json:
-            type:
-              mapping: foo:com.example.kafka.entity.Foo,bar:com.example.kafka.entity.Bar
-            trusted:
-              packages: foo:com.example.kafka.entity
+
 #      开启事务
 #      transaction-id-prefix: tx.
 #      重试次数
@@ -42,10 +34,10 @@ spring:
     #      手动ack
 #      enable-auto-commit: false
 
-    listener:
-      concurrency: 2
+#    listener:
+#      concurrency: 2
       # 设置批量消费,与max-poll-records配合使用
-      type: batch
+#      type: batch
   #      手动ack
 #      ack-mode: manual
   jmx:

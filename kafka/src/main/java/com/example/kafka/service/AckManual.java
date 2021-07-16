@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class AckManual {
 
-    @KafkaListener(id = "webGroup", topics = "topic-kl")
+    @KafkaListener(id = "webGroup3", topics = "topic-kl")
     public String listen(String input, Acknowledgment ack) {
         System.out.println(input);
         if ("kl".equals(input)) {
