@@ -1,5 +1,6 @@
 package com.example.redis.config;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
@@ -14,6 +15,7 @@ import java.lang.reflect.Method;
 @Configuration
 @EnableCaching
 @Getter
+@AllArgsConstructor
 public class RedisCacheConfig {
 
     private volatile LettuceConnectionFactory lettuceConnectionFactory;
@@ -22,15 +24,6 @@ public class RedisCacheConfig {
 
     public RedisCacheConfig(){
         super();
-    }
-
-    /*
-      带参数的构造方法 初始化所有成员变量
-     */
-    public RedisCacheConfig(LettuceConnectionFactory lettuceConnectionFactory, RedisTemplate<String, String> redisTemplate, RedisCacheManager redisCacheManager){
-        this.lettuceConnectionFactory = lettuceConnectionFactory;
-        this.redisTemplate = redisTemplate;
-        this.redisCacheManager = redisCacheManager;
     }
 
     @Bean
