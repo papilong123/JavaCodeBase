@@ -1,25 +1,3 @@
-# Getting Started
-
-### Reference Documentation
-
-For further reference, please consider the following sections:
-
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.5.2/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.5.2/maven-plugin/reference/html/#build-image)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/2.5.2/reference/htmlsingle/#boot-features-developing-web-applications)
-* [Spring Data Redis (Access+Driver)](https://docs.spring.io/spring-boot/docs/2.5.2/reference/htmlsingle/#boot-features-redis)
-* [Spring Data Reactive Redis](https://docs.spring.io/spring-boot/docs/2.5.2/reference/htmlsingle/#boot-features-redis)
-
-### Guides
-
-The following guides illustrate how to use some features concretely:
-
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/bookmarks/)
-* [Messaging with Redis](https://spring.io/guides/gs/messaging-redis/)
-
 ## 前言
 ### 1. 学习Spring
 核心功能
@@ -53,27 +31,87 @@ The following guides illustrate how to use some features concretely:
 
 ### 6. 新特性
 
-* Spring Data Redis 2.6 的新功能
-  
-* Spring Data Redis 2.5 的新功能
-* Spring Data Redis 2.4 的新功能
-* Spring Data Redis 2.3 的新功能
-* Spring Data Redis 2.2 的新功能
-* Spring Data Redis 2.1 的新功能
+#### * Spring Data Redis 2.6 的新功能
 
-- 使用Lettuce或者套接字连接
-- master负责写，replica负责读
-- 集成实例查询
-- @TypeAlias支持 Redis 存储库
+1. 当使用MessageListener作为订阅确认回调时，支持SubscriptionListener
+2. ReactiveRedisMessageListenerContainer和ReactiveRedisOperations提供了receiveLater()和listenToLater()方法来await，直到Redis确认订阅
+3. 支持redis6.2命令(LPOP/RPOP with count, LMOVE/BLMOVE, COPY, GETEX, GETDEL, GEOSEARCH, GEOSEARCHSTORE, 
+   ZPOPMIN, BZPOPMIN, ZPOPMAX, BZPOPMAX, ZMSCORE, ZDIFF, ZDIFFSTORE, ZINTER, ZUNION, HRANDFIELD, ZRANDMEMBER, SMISMEMBER)
 
-* Spring Data Redis 2.0 的新功能
-* Spring Data Redis 1.9 的新功能
-* Spring Data Redis 1.8 的新功能
-* Spring Data Redis 1.7 的新功能
-* Spring Data Redis 1.6 的新功能
-* Spring Data Redis 1.5 的新功能
+#### * Spring Data Redis 2.5 的新功能
+
+1. MappingRedisConverter不再将字节数组转换为集合表示
+
+#### * Spring Data Redis 2.4 的新功能
+
+1. RedisCache 暴露CacheStatics
+2. ACL身份验证支持Redis Standalone，Redis Cluster和Master/Replica
+3. 使用Jedis时支持Redis Sentinel的密码连接
+4. 支持ZREVRANGEBYLEX和ZLEXCOUNT命令
+5. 使用Jedis时支持流命令
+
+#### * Spring Data Redis 2.3 的新功能
+
+1. 对Duration和Instant的模板API方法重定义
+2. 扩展流命令
+
+#### * Spring Data Redis 2.2 的新功能
+
+1. Redis Streams
+2. 重定义union/diff/intersect的设置操作方法以接受单独的键集合
+3. 升级到Jedis3
+4. 添加对Jedis集群脚本命令的支持
+
+#### * Spring Data Redis 2.1 的新功能
+
+1. 使用Lettuce作为UNIX系统默认套接字连接
+2. 使用Lettuce支持主写从读
+3. 集成实例查询
+4. @TypeAlias支持 Redis 存储库
+
+#### * Spring Data Redis 2.0 的新功能
+1. 升级到 Java 8
+2. 升级到 Lettuce5.0
+3. 删除了对 SRP 和 JRedis 驱动程序的支持
+4. 使用 Lettuce 的反应式连接支持
+#### * Spring Data Redis 1.9 的新功能
+#### * Spring Data Redis 1.8 的新功能
+#### * Spring Data Redis 1.7 的新功能
+#### * Spring Data Redis 1.6 的新功能
+#### * Spring Data Redis 1.5 的新功能
 
 ### 7. 依赖
-
+1. 不成熟版本，release train BOM
+   <dependencyManagement>
+       <dependencies>
+           <dependency>
+               <groupId>org.springframework.data</groupId>
+               <artifactId>spring-data-bom</artifactId>
+               <version>2021.1.0-M1</version>
+               <scope>import</scope>
+               <type>pom</type>
+           </dependency>
+       </dependencies>
+   </dependencyManagement>
+2. 成熟版本
+   <dependencies>
+       <dependency>
+           <groupId>org.springframework.data</groupId>
+           <artifactId>spring-data-jpa</artifactId>
+       </dependency>
+   <dependencies>
+3. spring boot管理依赖
+4. spring framework依赖
 
 ## 参考文档
+
+### 8. 介绍
+
+#### 1. 文档结构
+
+Redis支持介绍了Redis模块的特性集。
+Redis Repositories引入了对Redis的存储库支持
+
+### 9. 为什么Spring Data Redis
+
+### 10. Redis支持
