@@ -109,7 +109,7 @@
 
 #### 1. 文档结构
 
-Redis支持介绍了Redis模块的特性集。
+Redis support介绍了Redis模块的特性集  
 Redis Repositories引入了对Redis的存储库支持
 
 ### 9. 为什么Spring Data Redis
