@@ -77,7 +77,7 @@
         <module>redis</module>
         <module>mysql</module>
         <module>mongodb</module>
-        <module>algorithm</module>
+        <module>rabbitmq</module>
     </modules>
 
 
