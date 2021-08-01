@@ -78,6 +78,7 @@
         <module>mysql</module>
         <module>mongodb</module>
         <module>rabbitmq</module>
+        <module>java-lang</module>
     </modules>
 
 
